@@ -1596,3 +1596,24 @@ img, video { max-width: 100%; height: auto; }
     font-size: 15px !important;
   }
 }
+
+/* ════════════════════════════════════════════════ */
+/*  SCROLL HINT — mobile fix                          */
+/* ════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .scroll-hint {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 32px auto 0;
+    opacity: 0.6;
+  }
+  .scroll-line { height: 24px; }
+}
+
+@media (max-width: 640px) {
+  .scroll-hint {
+    display: none; /* hide on phones — users know to scroll on touch */
+  }
+}
