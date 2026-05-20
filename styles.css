@@ -602,25 +602,38 @@ strong { color: var(--text); font-weight: 600; }
 }
 
 .big-cta {
-  text-align: center;
   padding: 60px 24px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
 }
 .big-cta-label {
   display: block;
   font-size: 13px; text-transform: uppercase;
   letter-spacing: 2px; color: var(--muted);
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 .big-cta-link {
+  display: inline-block;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: clamp(20px, 4.5vw, 42px);
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--text);
   border-bottom: 2px solid transparent;
   transition: all 0.3s var(--ease);
+  max-width: 100%;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+  line-height: 1.25;
   background: linear-gradient(90deg, var(--text), var(--text)) no-repeat;
   background-size: 0% 2px;
   background-position: 0 100%;
@@ -1559,3 +1572,27 @@ body.scrolled .section-banner {
 /* Prevent ANY horizontal overflow globally */
 html, body { overflow-x: hidden; max-width: 100%; }
 img, video { max-width: 100%; height: auto; }
+
+/* ════════════════════════════════════════════════ */
+/*  BIG CTA EMAIL — extra mobile safety              */
+/* ════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .big-cta {
+    padding: 44px 16px;
+    gap: 12px;
+  }
+  .big-cta-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .big-cta-link {
+    font-size: clamp(16px, 5.5vw, 22px) !important;
+    letter-spacing: -0.2px;
+  }
+}
+
+@media (max-width: 400px) {
+  .big-cta-link {
+    font-size: 15px !important;
+  }
+}
