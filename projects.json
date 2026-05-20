@@ -1,0 +1,189 @@
+[
+  {
+    "title": "F1 AI Race Engineer",
+    "tagline": "End-to-end AI system that replays historical F1 races with a learned pit-strategy model and live LLM commentary.",
+    "emoji": "🏎️",
+    "image": "assets/f1-project.mp4",
+    "tags": ["Python", "XGBoost", "Llama 3.3", "Groq", "FastF1", "vanilla JS"],
+    "links": {
+      "demo": "https://josh2106.github.io/f1-ai-race-engineer/",
+      "code": "https://github.com/Josh2106/f1-ai-race-engineer"
+    },
+    "featured": true,
+    "year": "2026",
+    "role": "Solo build · 6 weeks",
+    "details": "An AI 'race engineer' that replays any historical Grand Prix (2018+) and does what real F1 teams do in real time: predicts tyre degradation, recommends pit-stop windows, and narrates the race in the voice of Sky Sports' David Croft. The whole pipeline pre-renders to a 100KB JSON file so the site runs static on GitHub Pages with zero backend cost.",
+    "highlights": [
+      "Trained XGBoost tyre-degradation model on 11,000+ cleaned laps across 12 races (0.485s MAE on held-out test set)",
+      "Monte Carlo strategy engine enumerates ~500 pit-stop combinations and recommends the optimal window — matched Mercedes' real Hamilton call at 2024 Silverstone within 3 laps",
+      "Engineered ~100x speedup by batching XGBoost inference (35,000 single-row calls → ~500 batched calls)",
+      "Llama 3.3 70B via Groq generates broadcast-style commentary on detected events (pit stops, fastest laps, overtakes)",
+      "Honest debugging: discovered non-monotonic tyre curves were a visualization bug, not a model bug — held lap_number constant to isolate pure tyre-age effect"
+    ],
+    "metrics": [
+      { "label": "Test MAE", "value": "0.485s" },
+      { "label": "Training laps", "value": "11k+" },
+      { "label": "Strategy lap delta", "value": "±3" },
+      { "label": "Site weight", "value": "150KB" }
+    ],
+    "learnings": "An 'AI' recommendation is just search + a learned cost function + honest evaluation. The hard part isn't the model — it's the data cleaning (fuel-correcting lap times, dropping Safety Car laps), the perf optimization (batching predictions), and being honest about what your metrics actually mean."
+  },
+  {
+    "title": "Smart Crash Detection & Traffic Management",
+    "tagline": "Hardware-software integrated system that detects vehicle crashes and traffic congestion in real time using IoT sensors.",
+    "emoji": "🚦",
+    "image": null,
+    "tags": ["Python", "Arduino", "Ultrasonic Sensors", "IR Sensors", "IoT", "Embedded Systems"],
+    "links": {
+      "demo": null,
+      "code": null
+    },
+    "featured": false,
+    "year": "2025",
+    "role": "Solo build",
+    "details": "Designed and built a smart traffic safety system bridging hardware and software — ultrasonic sensors measure distance, vibration/impact sensors detect collisions, and IR sensors monitor road conditions. A Python layer continuously analyses the incoming sensor data, identifies abnormal patterns indicating crashes or heavy congestion, and triggers instant alerts to enable proactive accident response.",
+    "highlights": [
+      "Multi-sensor fusion: ultrasonic (distance), vibration/impact (crash), and IR (road condition) sensors working in parallel",
+      "Real-time pattern detection logic identifies sudden collisions and congestion spikes from live sensor streams",
+      "Alert system fires instant notifications on crash or heavy-traffic detection for proactive response",
+      "Demonstrated via physical model — showcasing applicability in smart cities and intelligent transport systems"
+    ],
+    "metrics": [],
+    "learnings": "Working with hardware taught me that real-world data is noisy by default. Vibration sensors pick up road bumps, not just crashes — threshold tuning and debounce logic ended up being as important as the detection algorithm itself."
+  },
+  {
+    "title": "Stress Score Analysis System",
+    "tagline": "NLP system that evaluates a person's stress level from written daily reflections and generates a quantitative stress score.",
+    "emoji": "🧠",
+    "image": null,
+    "tags": ["Python", "NLP", "Text Analysis", "Machine Learning"],
+    "links": {
+      "demo": null,
+      "code": null
+    },
+    "featured": false,
+    "year": "2025",
+    "role": "Solo build",
+    "details": "A Python-based NLP project that takes someone's written daily reflection as input and outputs a quantitative stress score. Uses keyword and phrase matching against a predefined stress-related lexicon to identify emotional patterns in text. Built with real-world application in mind — educational institutions could use it to proactively identify and support students facing mental stress.",
+    "highlights": [
+      "Keyword and phrase matching against a curated stress-related lexicon to surface emotional patterns",
+      "Generates a numeric stress score usable by institutions to flag at-risk students",
+      "Applied ethical AI thinking — built with student wellbeing and mental health use cases front of mind",
+      "Demonstrates foundational NLP: tokenisation, text preprocessing, and pattern-based text analytics"
+    ],
+    "metrics": [],
+    "learnings": "NLP doesn't always need a neural network. A well-designed lexicon with smart phrase matching can be surprisingly effective — and far more explainable to the people who'd actually use the score."
+  },
+  {
+    "title": "Animal Detection & Identification System",
+    "tagline": "Python computer vision system that identifies animal species from live camera feeds, video files, and static images.",
+    "emoji": "🐾",
+    "image": null,
+    "tags": ["Python", "OpenCV", "MediaPipe", "Computer Vision", "Deep Learning", "Object Detection"],
+    "links": {
+      "demo": null,
+      "code": null
+    },
+    "featured": false,
+    "year": "2025",
+    "role": "Solo build",
+    "details": "A computer vision system capable of classifying and identifying animal species from three input modes: live camera feed, video files, and static images. Built with OpenCV and deep learning-based detection, it was designed with real-world deployment contexts in mind — zoos, wildlife sanctuaries, and anti-poaching efforts where instant detection and alerting when animals enter restricted areas could make a real difference.",
+    "highlights": [
+      "Handles three input modes: live camera feed, video files, and static images — same detection pipeline for all three",
+      "Deep learning classification to identify and distinguish between different animal species",
+      "Anti-poaching use case: instant alert when an animal is detected in a restricted or protected zone",
+      "Explored real-world applications in biodiversity monitoring and wildlife conservation"
+    ],
+    "metrics": [],
+    "learnings": "Computer vision models are only as good as their training distribution. Testing on live camera feeds exposed lighting and angle variations the static image dataset didn't cover — taught me to think about deployment context from day one."
+  },
+  {
+    "title": "Object-Oriented Ticket Booking System",
+    "tagline": "Console-based ticket booking system built from scratch in Python using core OOP principles.",
+    "emoji": "🎟️",
+    "image": null,
+    "tags": ["Python", "OOP", "Data Structures", "File Handling"],
+    "links": {
+      "demo": null,
+      "code": null
+    },
+    "featured": false,
+    "year": "2024",
+    "role": "Solo build",
+    "details": "A fully console-driven ticket booking application built to demonstrate solid object-oriented design. Covers user account creation and authentication, real-time ticket availability tracking, overbooking prevention, and a modular code structure designed for maintainability. Built as a ground-up exercise in applying encapsulation, classes, objects, and data abstraction to a real-world system.",
+    "highlights": [
+      "User authentication system — secure account creation with username/password management",
+      "Real-time availability tracking with overbooking prevention logic",
+      "Modular OOP architecture using encapsulation, inheritance, and data abstraction",
+      "File handling for persistent data storage across sessions"
+    ],
+    "metrics": [],
+    "learnings": "Building something 'simple' from scratch forces you to make every design decision yourself — I learned more about why OOP patterns exist by implementing them than by reading about them."
+  },
+  {
+    "title": "ClaimStream",
+    "tagline": "Web application for insurance claim management — built as a full-stack project with a clean UI.",
+    "emoji": "📋",
+    "image": null,
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "links": {
+      "demo": null,
+      "code": "https://github.com/Josh2106/claimstream"
+    },
+    "featured": false,
+    "year": "2026",
+    "role": "Solo",
+    "details": "ClaimStream is a web-based insurance claims management system. Built with vanilla HTML/CSS/JS, it demonstrates front-end architecture and UI design for a real-world use case — managing and tracking insurance claims through a clean dashboard interface.",
+    "highlights": [
+      "Clean dashboard UI for claim creation, tracking, and status updates",
+      "Responsive layout designed for both desktop and mobile",
+      "Structured data flow without any framework dependencies"
+    ],
+    "metrics": [],
+    "learnings": ""
+  },
+  {
+    "title": "DBMS Project",
+    "tagline": "Full-stack database management system built with TypeScript — relational data modelling and CRUD operations.",
+    "emoji": "🗄️",
+    "image": null,
+    "tags": ["TypeScript", "SQL", "Database Design"],
+    "links": {
+      "demo": null,
+      "code": "https://github.com/Josh2106/dbms-project"
+    },
+    "featured": false,
+    "year": "2026",
+    "role": "Solo",
+    "details": "A full-stack database management system project developed as part of my B.Tech curriculum. Covers relational schema design, normalisation, and TypeScript-driven CRUD operations — bridging the gap between theory and a working web interface.",
+    "highlights": [
+      "Designed relational schema with ER diagrams and normalisation up to 3NF",
+      "TypeScript backend with typed query interfaces for safe DB interactions",
+      "CRUD operations with form validation and structured error handling"
+    ],
+    "metrics": [],
+    "learnings": ""
+  },
+  {
+    "title": "3D Tic-Tac-Toe",
+    "tagline": "3D tic-tac-toe built with React, React Three Fiber, and react-spring — a 2D classic made genuinely spatial.",
+    "emoji": "⭕",
+    "image": "assets/xoxo-project.mp4",
+    "tags": ["TypeScript", "React", "React Three Fiber", "react-spring", "3D"],
+    "links": {
+      "demo": null,
+      "code": "https://github.com/Josh2106/xoxogame"
+    },
+    "featured": false,
+    "year": "2026",
+    "role": "Solo",
+    "details": "Took the classic tic-tac-toe and moved it into 3D space using React Three Fiber (Three.js bindings for React) and react-spring for physics-feeling animations. The game runs fully in-browser with no backend — a fun exploration of 3D rendering and interactive game-state logic in TypeScript.",
+    "highlights": [
+      "3D board rendered with React Three Fiber — full orbit-controls camera",
+      "Smooth placement animations powered by react-spring",
+      "Game logic written in typed TypeScript with win-detection across all winning lines"
+    ],
+    "metrics": [],
+    "learnings": "React Three Fiber makes WebGL approachable but the mental model shift from 2D DOM to a 3D scene graph is steep. Learned to think in world-space coordinates instead of CSS layout."
+  }
+]

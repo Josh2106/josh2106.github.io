@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joshua — AI/ML Engineer in Training</title>
+  <meta name="description" content="3rd-year B.Tech AI/ML student building end-to-end ML systems with Python, XGBoost, and LLMs." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="favicon.svg" />
+  <meta name="theme-color" content="#07080f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursor-dot"></div>
+
+<!-- Scroll-progress bar -->
+<div class="progress-bar" id="progress-bar"></div>
+
+<!-- Animated background grid + mesh -->
+<div class="bg-grid"></div>
+<div class="bg-mesh" id="bg-mesh"></div>
+<div class="bg-noise"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="#top" data-cursor="hover">
+    <span class="brand-mark">J</span>
+    <span class="brand-name">joshua<span class="dot">.</span>dev</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about" data-section="about" data-cursor="hover">About</a>
+    <a href="#projects" data-section="projects" data-cursor="hover">Projects</a>
+    <a href="#experience" data-section="experience" data-cursor="hover">Experience</a>
+    <a href="#skills" data-section="skills" data-cursor="hover">Skills</a>
+    <a href="#certifications" data-section="certifications" data-cursor="hover">Certs</a>
+    <a href="resume.html" target="_blank" data-cursor="hover">Resume ↗</a>
+  </div>
+</nav>
+
+<!-- Floating section indicator (side rail) -->
+<aside class="scroll-rail" aria-hidden="true">
+  <a href="#top" class="rail-dot" data-section="top" data-label="Home">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Home</span>
+  </a>
+  <a href="#about" class="rail-dot" data-section="about" data-label="About">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">About</span>
+  </a>
+  <a href="#projects" class="rail-dot" data-section="projects" data-label="Projects">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Projects</span>
+  </a>
+  <a href="#experience" class="rail-dot" data-section="experience" data-label="Experience">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Experience</span>
+  </a>
+  <a href="#skills" class="rail-dot" data-section="skills" data-label="Skills">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Skills</span>
+  </a>
+  <a href="#certifications" class="rail-dot" data-section="certifications" data-label="Certifications">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Certifications</span>
+  </a>
+  <a href="#contact" class="rail-dot" data-section="contact" data-label="Contact">
+    <span class="rail-dot-inner"></span>
+    <span class="rail-tooltip">Contact</span>
+  </a>
+</aside>
+
+<!-- Sticky section-name label (top, only after scroll) -->
+<div class="section-banner" id="section-banner" aria-hidden="true">
+  <span class="section-banner-num" id="section-banner-num">00</span>
+  <span class="section-banner-name" id="section-banner-name">Home</span>
+</div>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-inner hero-split">
+  <div class="hero-text">
+    <h1 class="hero-title">
+      <span class="reveal-stagger" data-text="Learning."></span>
+      <span class="reveal-stagger accent" data-text="Building."></span>
+      <span class="reveal-stagger" data-text="Shipping."></span>
+    </h1>
+
+    <p class="hero-bio reveal">
+      I'm <strong>Joshua</strong> — a 3rd-year B.Tech (AI/ML) student.
+      I learn by doing: picking up new tools, frameworks, and ideas, then
+      building real projects with them end-to-end — from raw data to a working product.
+      <span class="cursor-blink" id="typer-target"></span>
+    </p>
+
+    <div class="hero-cta reveal">
+      <a href="#projects" class="btn primary magnetic" data-cursor="hover">
+        See my work
+        <span class="arrow">→</span>
+      </a>
+      <a href="resume.html" target="_blank" rel="noopener" class="btn magnetic" data-cursor="hover">Resume <span class="arrow">↗</span></a>
+      <a href="https://github.com/Josh2106" target="_blank" rel="noopener" class="btn magnetic" data-cursor="hover">GitHub</a>
+      <a href="https://www.linkedin.com/in/joshua-kumar-252450297/" target="_blank" rel="noopener" class="btn magnetic" data-cursor="hover">LinkedIn</a>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="stats reveal">
+      <div class="stat">
+        <span class="stat-num" data-count="8" data-suffix="">0</span>
+        <span class="stat-label">Projects shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="3" data-suffix="rd year">0</span>
+        <span class="stat-label">B.Tech AI/ML</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">Built from scratch</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero photo -->
+  <div class="hero-photo reveal">
+    <div class="hero-photo-frame">
+      <img src="assets/joshua.jpg" alt="Joshua Kumar" />
+      <div class="hero-photo-ring"></div>
+    </div>
+    <div class="hero-photo-tag">
+      <span class="hero-photo-dot"></span>
+      <span>Joshua Kumar · 3rd year, B.Tech AI</span>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Floating orbit shapes -->
+  <div class="orbit-wrap" aria-hidden="true">
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+    <div class="orbit orbit-3"></div>
+  </div>
+
+  <div class="scroll-hint reveal">
+    <span>scroll</span>
+    <span class="scroll-line"></span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>PYTHON</span><span>•</span>
+    <span>XGBOOST</span><span>•</span>
+    <span>OPENCV</span><span>•</span>
+    <span>MEDIAPIPE</span><span>•</span>
+    <span>GROQ</span><span>•</span>
+    <span>NLP</span><span>•</span>
+    <span>SCIKIT-LEARN</span><span>•</span>
+    <span>ARDUINO</span><span>•</span>
+    <span>REACT</span><span>•</span>
+    <span>TYPESCRIPT</span><span>•</span>
+    <span>LLAMA 3.3</span><span>•</span>
+    <span>PANDAS</span><span>•</span>
+    <!-- repeat for seamless loop -->
+    <span>PYTHON</span><span>•</span>
+    <span>XGBOOST</span><span>•</span>
+    <span>OPENCV</span><span>•</span>
+    <span>MEDIAPIPE</span><span>•</span>
+    <span>GROQ</span><span>•</span>
+    <span>NLP</span><span>•</span>
+    <span>SCIKIT-LEARN</span><span>•</span>
+    <span>ARDUINO</span><span>•</span>
+    <span>REACT</span><span>•</span>
+    <span>TYPESCRIPT</span><span>•</span>
+    <span>LLAMA 3.3</span><span>•</span>
+    <span>PANDAS</span><span>•</span>
+  </div>
+</div>
+
+<!-- ABOUT / EDUCATION -->
+<section id="about" class="section">
+  <header class="section-head reveal">
+    <span class="section-num">01</span>
+    <h2><span data-letters="About me."></span></h2>
+    <p class="muted">Where I'm studying, what I'm working on, and what I'm building toward.</p>
+  </header>
+
+  <div class="about-grid">
+    <div class="about-card reveal">
+      <span class="about-label">Education</span>
+      <h3 class="about-title">Karunya University of Technology &amp; Sciences</h3>
+      <p class="about-meta">B.Tech CSE (Artificial Intelligence) · CGPA 8.0</p>
+      <p class="about-date">Aug 2024 — July 2028</p>
+      <p class="about-body">Currently in my 3rd year, focusing on machine learning, computer vision, and applied AI systems. Coursework spans data structures, DBMS, computer networks, and the AI specialisation track.</p>
+    </div>
+    <div class="about-card reveal">
+      <span class="about-label">Based in</span>
+      <h3 class="about-title">Ranchi, Jharkhand · India</h3>
+      <p class="about-meta">Open to remote &amp; on-site internships</p>
+      <p class="about-date">Summer / Winter 2026</p>
+      <p class="about-body">Looking for AI/ML, computer vision, or full-stack engineering internships where I can ship real things alongside experienced engineers. Languages: English, Hindi.</p>
+    </div>
+    <div class="about-card reveal">
+      <span class="about-label">Beyond the code</span>
+      <h3 class="about-title">Guitarist · Footballer · Hooper</h3>
+      <p class="about-meta">Trinity School of Music — graded guitarist</p>
+      <p class="about-date">Long-time F1 obsessive</p>
+      <p class="about-body">Outside of building things, I play guitar (with grades from Trinity College London / Trinity School of Music), hit the football pitch, and run the basketball court whenever I can. Sport and music are how I reset between deep-work sessions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <header class="section-head reveal">
+    <span class="section-num">02</span>
+    <h2><span data-letters="Selected work."></span></h2>
+    <p class="muted">Things I built, why they exist, and what I learned shipping them.</p>
+  </header>
+  <div id="projects-grid" class="projects-grid">
+    <!-- populated by app.js -->
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <header class="section-head reveal">
+    <span class="section-num">03</span>
+    <h2><span data-letters="Experience."></span></h2>
+    <p class="muted">Leadership and coordination roles outside the codebase.</p>
+  </header>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">Feb 2026 — Present</span>
+          <span class="timeline-dot">·</span>
+          <span class="timeline-org">IAESTE LC Karunya University</span>
+        </div>
+        <h3 class="timeline-role">Senior Coordinator — ITDA (IT &amp; Data Analytics)</h3>
+        <ul class="timeline-bullets">
+          <li>Lead the IT &amp; Data Analytics portfolio — overseeing data collection, reporting pipelines, and analytics-driven decision-making for the Local Committee.</li>
+          <li>Build and maintain the LC's digital infrastructure: internal tools, dashboards, and data systems used across portfolios.</li>
+          <li>Turn committee activity data (exchanges, events, members) into actionable insights for strategic planning and reporting.</li>
+          <li>Mentor junior coordinators on data literacy and represent the LC in inter-committee technical discussions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">Sept 2025 — Feb 2026</span>
+          <span class="timeline-dot">·</span>
+          <span class="timeline-org">IAESTE LC Karunya University</span>
+        </div>
+        <h3 class="timeline-role">Junior Coordinator — IR &amp; HR</h3>
+        <ul class="timeline-bullets">
+          <li>Coordinated with international IAESTE committees, supporting offer processing and communication for incoming &amp; outgoing exchange participants.</li>
+          <li>Drove HR operations including internal coordination, member onboarding, and structured communication within the Local Committee.</li>
+          <li>Maintained operational efficiency through systematic documentation, follow-ups, and cross-portfolio coordination.</li>
+          <li>Demonstrated leadership through accountability and the ability to work in a structured international organisational environment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">July 2025 — Dec 2025</span>
+          <span class="timeline-dot">·</span>
+          <span class="timeline-org">ACM Karunya University Chapter</span>
+        </div>
+        <h3 class="timeline-role">Treasurer</h3>
+        <ul class="timeline-bullets">
+          <li>Led financial management and budgeting for the entire chapter — fund allocation, expense tracking, and transparency for all activities.</li>
+          <li>Helped organise and execute technical events including hands-on workshops, seminars, and skill-development sessions on emerging tech.</li>
+          <li>Coordinated with faculty advisors, external speakers, and organising teams to ensure smooth execution end-to-end.</li>
+          <li>Frequently hosted and facilitated workshops, demonstrating strong leadership, communication, and event-management skills.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <header class="section-head reveal">
+    <span class="section-num">04</span>
+    <h2><span data-letters="The toolbox."></span></h2>
+    <p class="muted">Stack I'm comfortable shipping production-grade code with today.</p>
+  </header>
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">{ }</span> Languages</h3>
+      <div class="tag-list">
+        <span class="tag strong">Python</span>
+        <span class="tag">C</span>
+        <span class="tag">C++</span>
+        <span class="tag">Java</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">∑</span> AI / ML</h3>
+      <div class="tag-list">
+        <span class="tag strong">XGBoost</span>
+        <span class="tag strong">scikit-learn</span>
+        <span class="tag strong">NLP</span>
+        <span class="tag">pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">ML Fundamentals</span>
+        <span class="tag">Text Analysis</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">👁</span> Computer Vision</h3>
+      <div class="tag-list">
+        <span class="tag strong">OpenCV</span>
+        <span class="tag strong">MediaPipe</span>
+        <span class="tag">Object Detection</span>
+        <span class="tag">Image &amp; Video Processing</span>
+        <span class="tag">Hand &amp; Gesture Recognition</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">⚡</span> LLMs &amp; APIs</h3>
+      <div class="tag-list">
+        <span class="tag strong">Groq</span>
+        <span class="tag">Llama 3.3 70B</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Prompt Engineering</span>
+        <span class="tag">FastAPI</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">⚙</span> Embedded &amp; IoT</h3>
+      <div class="tag-list">
+        <span class="tag strong">Arduino</span>
+        <span class="tag">Microcontrollers</span>
+        <span class="tag">Ultrasonic Sensors</span>
+        <span class="tag">IR Sensors</span>
+        <span class="tag">Sensor Data Integration</span>
+        <span class="tag">Serial Communication</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <h3><span class="skill-icon">◬</span> Web &amp; Tools</h3>
+      <div class="tag-list">
+        <span class="tag">React</span>
+        <span class="tag">Chart.js</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">vanilla JS</span>
+        <span class="tag strong">Git</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">VS Code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <header class="section-head reveal">
+    <span class="section-num">05</span>
+    <h2><span data-letters="Certifications."></span></h2>
+    <p class="muted">Courses and credentials I've completed alongside my degree.</p>
+  </header>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <span class="cert-issuer">NPTEL · IIT Madras</span>
+      <h4 class="cert-name">Cyber Security &amp; Privacy</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">NPTEL · IIT Madras</span>
+      <h4 class="cert-name">English Language for Competitive Exams</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">Infosys Springboard</span>
+      <h4 class="cert-name">Artificial Intelligence — Types of AI</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">Infosys Springboard</span>
+      <h4 class="cert-name">Python Data Analysis &amp; Visualization Masterclass</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">Cisco Networking Academy</span>
+      <h4 class="cert-name">Introduction to CyberSecurity</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">Cisco Networking Academy</span>
+      <h4 class="cert-name">Python Essentials</h4>
+    </div>
+    <div class="cert-card reveal">
+      <span class="cert-issuer">Cisco Networking Academy</span>
+      <h4 class="cert-name">Cybersecurity Essentials</h4>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <header class="section-head reveal">
+    <span class="section-num">06</span>
+    <h2><span data-letters="Let's build something."></span></h2>
+    <p class="muted">Open to AI/ML internships, side-project collaborations, or just nerd talk about tech and what I'm building.</p>
+  </header>
+  <div class="contact-grid">
+    <a class="contact-card reveal" href="mailto:joshuakumar.work@gmail.com" data-cursor="hover">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">joshuakumar.work@gmail.com</span>
+      <span class="contact-arrow">→</span>
+    </a>
+    <a class="contact-card reveal" href="https://github.com/Josh2106" target="_blank" rel="noopener" data-cursor="hover">
+      <span class="contact-label">GitHub</span>
+      <span class="contact-value">@Josh2106</span>
+      <span class="contact-arrow">→</span>
+    </a>
+    <a class="contact-card reveal" href="https://www.linkedin.com/in/joshua-kumar-252450297/" target="_blank" rel="noopener" data-cursor="hover">
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">/in/joshua-kumar-252450297</span>
+      <span class="contact-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="big-cta reveal">
+    <span class="big-cta-label">or just say hi</span>
+    <a href="mailto:joshuakumar.work@gmail.com" class="big-cta-link" data-cursor="hover">
+      joshuakumar.work@gmail.com
+    </a>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="Close" data-cursor="hover">
+      <span>✕</span>
+    </button>
+    <div class="modal-content" id="modal-content">
+      <!-- populated by app.js -->
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Joshua — built from scratch with vanilla HTML/CSS/JS</span>
+  <span class="muted">Hosted on GitHub Pages · No frameworks, no trackers</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
