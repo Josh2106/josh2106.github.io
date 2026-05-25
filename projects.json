@@ -1,5 +1,34 @@
 [
   {
+    "title": "Synapse — Neural Network Lab",
+    "tagline": "Interactive playground that implements backpropagation from scratch in TypeScript — watch neural networks learn decision boundaries in real-time.",
+    "emoji": "🧪",
+    "image": null,
+    "tags": ["TypeScript", "Next.js", "Canvas API", "Backpropagation", "Framer Motion"],
+    "links": {
+      "demo": "https://synapse-lab.vercel.app",
+      "code": "https://github.com/Josh2106/synapse"
+    },
+    "featured": true,
+    "year": "2026",
+    "role": "Solo build",
+    "details": "A neural network laboratory built entirely from scratch — no TensorFlow, no PyTorch, just raw TypeScript implementing forward propagation, backpropagation, and gradient descent. Users configure network architecture (layers, neurons, activation functions), pick a dataset, and watch the decision boundary evolve in real-time as the network trains.",
+    "highlights": [
+      "Full neural network engine from scratch: forward pass, backpropagation, and SGD — zero ML library dependencies",
+      "Real-time decision boundary visualization renders 6,400 predictions per frame on an 80×80 Canvas grid",
+      "He weight initialization (sqrt(2/fan_in)) for stable gradient flow with ReLU networks",
+      "requestAnimationFrame training loop runs 5 epochs/frame while maintaining 60fps UI responsiveness",
+      "5 procedural datasets (XOR, Spiral, Moons, Circle, Gaussian) with configurable architecture up to 5 hidden layers"
+    ],
+    "metrics": [
+      { "label": "ML Libraries", "value": "0" },
+      { "label": "Predictions/frame", "value": "6,400" },
+      { "label": "Max layers", "value": "5" },
+      { "label": "Datasets", "value": "5" }
+    ],
+    "learnings": "Building backpropagation from scratch forces you to understand every derivative in the chain rule — there's no loss.backward() to hide behind. The hardest part wasn't the math; it was debugging vanishing gradients and realizing the sigmoid output layer needed separate derivative handling from hidden layers."
+  },
+  {
     "title": "F1 AI Race Engineer",
     "tagline": "End-to-end AI system that replays historical F1 races with a learned pit-strategy model and live LLM commentary.",
     "emoji": "🏎️",
