@@ -237,6 +237,31 @@
 
     <div class="entry">
       <div class="entry-head">
+        <span class="entry-title">Synapse — Neural Network Laboratory &nbsp;—&nbsp; <em>TypeScript, Next.js, Canvas API, Framer Motion</em></span>
+        <span class="entry-date"><a href="https://github.com/Josh2106/synapse" target="_blank">source</a></span>
+      </div>
+      <ul>
+        <li>Built a complete neural network engine <strong>from scratch in TypeScript</strong> — forward propagation, backpropagation, and gradient descent with zero ML library dependencies (no TensorFlow.js, no Brain.js).</li>
+        <li>Implemented He weight initialization (sqrt(2/fan_in)) for stable gradient flow, separate sigmoid output-layer derivative handling, and configurable architectures up to <strong>5 hidden layers with 12 neurons each</strong>.</li>
+        <li>Rendered real-time decision boundary visualization on an 80×80 Canvas grid (<strong>6,400 predictions per frame</strong>) using requestAnimationFrame at 60fps while training 5 epochs per frame.</li>
+        <li>Designed 5 procedural dataset generators (XOR, Spiral, Moons, Circle, Gaussian) with interactive hyperparameter controls — activation function, learning rate, loss function — enabling live experimentation.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">AI Image Detector — Chrome Extension &nbsp;—&nbsp; <em>Python, ONNX Runtime, Vision Transformer, Chrome APIs</em></span>
+        <span class="entry-date"><a href="https://github.com/Josh2106/deepfake-detector" target="_blank">source</a></span>
+      </div>
+      <ul>
+        <li>Built a Chrome extension that flags AI-generated images on any webpage, running inference <strong>entirely in the browser</strong> via ONNX Runtime Web — no data leaves the user's machine.</li>
+        <li>Exported a pre-trained Vision Transformer (Organika/sdxl-detector) from Hugging Face to ONNX format and applied <strong>INT8 dynamic quantization</strong>, shrinking model size from 350MB to ~90MB for browser deployment.</li>
+        <li>Engineered end-to-end pipeline: Python export/quantize scripts → ONNX model → Chrome extension with background service worker, content script injection, and popup UI for per-page detection results.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
         <span class="entry-title">Animal Detection &amp; Identification System &nbsp;—&nbsp; <em>Python, OpenCV, MediaPipe, Deep Learning</em></span>
       </div>
       <ul>
@@ -282,7 +307,7 @@
     </div>
     <div class="skills-row">
       <div class="skills-label">AI / ML</div>
-      <div class="skills-value">XGBoost, scikit-learn, pandas, NumPy, NLP, Text Analytics, ML Fundamentals</div>
+      <div class="skills-value">XGBoost, scikit-learn, pandas, NumPy, ONNX Runtime, Neural Networks (from scratch), NLP, Backpropagation</div>
     </div>
     <div class="skills-row">
       <div class="skills-label">LLMs &amp; APIs</div>
@@ -290,7 +315,7 @@
     </div>
     <div class="skills-row">
       <div class="skills-label">Computer Vision</div>
-      <div class="skills-value">OpenCV, MediaPipe, Image &amp; Video Processing, Object Detection, Hand &amp; Gesture Recognition</div>
+      <div class="skills-value">OpenCV, MediaPipe, Vision Transformers, ONNX model export &amp; quantization, Object Detection</div>
     </div>
     <div class="skills-row">
       <div class="skills-label">Embedded / IoT</div>
@@ -298,7 +323,7 @@
     </div>
     <div class="skills-row">
       <div class="skills-label">Web &amp; Tools</div>
-      <div class="skills-value">React, React Three Fiber, Chart.js, Streamlit, vanilla JS · Git, GitHub, VS Code, Jupyter</div>
+      <div class="skills-value">Next.js, React, TypeScript, Tailwind CSS, Canvas API, Chrome Extensions, Framer Motion · Git, GitHub, Vercel</div>
     </div>
   </div>
 
