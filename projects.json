@@ -3,7 +3,7 @@
     "title": "Synapse — Neural Network Lab",
     "tagline": "Interactive playground that implements backpropagation from scratch in TypeScript — watch neural networks learn decision boundaries in real-time.",
     "emoji": "🧪",
-    "image": null,
+    "image": "assets/synapse-project.mp4",
     "tags": ["TypeScript", "Next.js", "Canvas API", "Backpropagation", "Framer Motion"],
     "links": {
       "demo": "https://synapse-lab.vercel.app",
