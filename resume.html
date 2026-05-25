@@ -24,7 +24,7 @@
     font-family: 'Inter', system-ui, sans-serif;
     background: #e8ecf0;
     color: var(--ink);
-    line-height: 1.38;
+    line-height: 1.32;
     -webkit-font-smoothing: antialiased;
     padding: 24px 16px;
   }
@@ -60,19 +60,20 @@
 
   .page {
     width: 8.5in;
-    min-height: 11in;
+    height: 11in;
     background: var(--bg);
     margin: 0 auto;
-    padding: 0.4in 0.5in;
+    padding: 0.35in 0.45in;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
     color: var(--ink);
-    font-size: 9.5pt;
+    font-size: 8.8pt;
+    overflow: hidden;
   }
 
   /* HEADER */
   .name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 22pt;
+    font-size: 20pt;
     font-weight: 700;
     letter-spacing: -0.5px;
     text-align: center;
@@ -81,63 +82,63 @@
   }
   .contact-line {
     text-align: center;
-    margin-top: 5px;
-    font-size: 9pt;
+    margin-top: 4px;
+    font-size: 8.5pt;
     color: var(--ink-soft);
   }
   .contact-line a { color: var(--ink-soft); text-decoration: none; }
-  .contact-line .sep { margin: 0 6px; color: var(--ink-muted); }
+  .contact-line .sep { margin: 0 5px; color: var(--ink-muted); }
 
   /* SECTION */
-  .sec { margin-top: 10px; }
+  .sec { margin-top: 8px; }
   .sec-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10pt;
+    font-size: 9pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.4px;
     color: var(--ink);
     border-bottom: 1.2px solid var(--ink);
-    padding-bottom: 2px;
-    margin-bottom: 5px;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
   }
 
   /* ENTRY */
-  .entry { margin-bottom: 6px; break-inside: avoid; }
+  .entry { margin-bottom: 5px; break-inside: avoid; }
   .entry:last-child { margin-bottom: 0; }
   .entry-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 10px;
+    gap: 8px;
   }
-  .entry-title { font-weight: 700; font-size: 9.7pt; color: var(--ink); }
+  .entry-title { font-weight: 700; font-size: 9pt; color: var(--ink); }
   .entry-title em { font-weight: 500; color: var(--ink-soft); font-style: normal; }
   .entry-date {
-    font-size: 8.8pt;
+    font-size: 8.2pt;
     color: var(--ink-muted);
     font-style: italic;
     white-space: nowrap;
   }
   .entry-sub {
-    font-size: 9.2pt;
+    font-size: 8.6pt;
     color: var(--ink-soft);
     margin-top: 1px;
-    line-height: 1.4;
+    line-height: 1.35;
   }
   .entry ul { list-style: none; padding-left: 0; margin-top: 1px; }
   .entry ul li {
     position: relative;
-    padding-left: 12px;
-    margin-bottom: 1.5px;
-    font-size: 9.3pt;
-    line-height: 1.4;
+    padding-left: 10px;
+    margin-bottom: 1px;
+    font-size: 8.6pt;
+    line-height: 1.35;
     color: var(--ink-soft);
   }
   .entry ul li::before {
     content: "•";
     position: absolute;
-    left: 2px;
+    left: 1px;
     color: var(--ink);
     font-weight: 700;
   }
@@ -146,21 +147,36 @@
   /* SKILLS */
   .skills-row {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 3px 12px;
-    font-size: 9.3pt;
-    margin-bottom: 2px;
+    grid-template-columns: 110px 1fr;
+    gap: 2px 10px;
+    font-size: 8.6pt;
+    margin-bottom: 1px;
   }
   .skills-label { font-weight: 700; color: var(--ink); }
   .skills-value { color: var(--ink-soft); }
 
   /* COMPACT */
   .compact-list {
-    font-size: 9.3pt;
+    font-size: 8.6pt;
     color: var(--ink-soft);
-    line-height: 1.45;
+    line-height: 1.4;
   }
   .compact-list strong { color: var(--ink); font-weight: 600; }
+
+  /* OTHER PROJECTS */
+  .other-projects {
+    margin-top: 4px;
+    font-size: 8.5pt;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .other-projects .op-item {
+    margin-bottom: 2px;
+  }
+  .other-projects .op-title {
+    font-weight: 700;
+    color: var(--ink);
+  }
 
   /* PRINT */
   @media print {
@@ -169,8 +185,9 @@
     .page {
       box-shadow: none;
       margin: 0;
-      padding: 0.38in 0.48in;
+      padding: 0.35in 0.45in;
       width: 100%;
+      height: auto;
       min-height: auto;
     }
     a { color: inherit; text-decoration: none; }
@@ -178,15 +195,15 @@
 
   @page {
     size: letter;
-    margin: 0.3in;
+    margin: 0;
   }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <a href="index.html">← Back to portfolio</a>
-  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+  <a href="index.html">&larr; Back to portfolio</a>
+  <button class="print-btn" onclick="window.print()">&darr; Save as PDF / Print</button>
 </div>
 
 <div class="page">
@@ -210,10 +227,10 @@
     <div class="sec-title">Education</div>
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Karunya University of Technology and Sciences &nbsp;—&nbsp; <em>B.Tech CSE (Artificial Intelligence)</em></span>
-        <span class="entry-date">Aug 2024 — July 2028</span>
+        <span class="entry-title">Karunya University of Technology and Sciences &nbsp;&mdash;&nbsp; <em>B.Tech CSE (Artificial Intelligence)</em></span>
+        <span class="entry-date">Aug 2024 &mdash; July 2028</span>
       </div>
-      <div class="entry-sub">CGPA: 8.0 &nbsp;·&nbsp; Coursework: Machine Learning, DBMS, Data Structures, Computer Networks, AI Specialisation</div>
+      <div class="entry-sub">CGPA: 8.0 &nbsp;&middot;&nbsp; Coursework: Machine Learning, DBMS, Data Structures, Computer Networks, AI Specialisation</div>
     </div>
   </div>
 
@@ -223,77 +240,68 @@
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">F1 AI Race Engineer &nbsp;—&nbsp; <em>Python, XGBoost, Llama 3.3 (Groq), FastF1, vanilla JS</em></span>
+        <span class="entry-title">F1 AI Race Engineer &nbsp;&mdash;&nbsp; <em>Python, XGBoost, Llama 3.3 (Groq), FastF1</em></span>
         <span class="entry-date"><a href="https://josh2106.github.io/f1-ai-race-engineer/" target="_blank">live demo</a></span>
       </div>
       <ul>
-        <li>Architected an end-to-end AI race engineer that replays historical Grand Prix races (2018+), predicts tyre degradation, simulates pit-stop strategies via Monte Carlo search, and generates real-time broadcast commentary — pre-rendered output runs as a <strong>150KB static site</strong> with zero backend cost.</li>
-        <li>Trained an XGBoost tyre-degradation regression model on <strong>11,000+ cleaned laps</strong> across 12 races with engineered features (fuel correction, stint metadata, compound encoding, lap-position context); achieved <strong>0.485s MAE</strong> on a held-out test set.</li>
-        <li>Built a Monte Carlo pit-strategy engine enumerating ~500 stop permutations using the learned cost function as the lap-time projection — recommended windows matched Mercedes' real Hamilton call at 2024 Silverstone within <strong>3 laps</strong>.</li>
-        <li>Engineered a <strong>~100× inference speedup</strong> by collapsing 35,000 per-lap XGBoost calls into ~500 batched DataFrame predictions, reducing strategy-engine runtime from minutes to seconds.</li>
-        <li>Integrated <strong>Llama 3.3 70B via Groq</strong> for streaming Crofty-style commentary; designed an event-detection layer (overtakes, pit stops, fastest laps) feeding structured race state into a persona-driven prompt template.</li>
+        <li>End-to-end AI system that replays historical F1 races: trained an XGBoost tyre-degradation model on <strong>11,000+ laps</strong> (0.485s MAE), built a Monte Carlo pit-strategy engine (~500 permutations), and integrated <strong>Llama 3.3 70B</strong> for broadcast-style commentary.</li>
+        <li>Engineered <strong>~100&times; inference speedup</strong> via batched DataFrame predictions; strategy recommendations matched Mercedes' real calls within 3 laps. Pre-rendered to a 150KB static site with zero backend.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Synapse — Neural Network Laboratory &nbsp;—&nbsp; <em>TypeScript, Next.js, Canvas API, Framer Motion</em></span>
+        <span class="entry-title">Synapse &mdash; Neural Network Laboratory &nbsp;&mdash;&nbsp; <em>TypeScript, Next.js, Canvas API</em></span>
         <span class="entry-date"><a href="https://github.com/Josh2106/synapse" target="_blank">source</a></span>
       </div>
       <ul>
-        <li>Built a complete neural network engine <strong>from scratch in TypeScript</strong> — forward propagation, backpropagation, and gradient descent with zero ML library dependencies (no TensorFlow.js, no Brain.js).</li>
-        <li>Implemented He weight initialization (sqrt(2/fan_in)) for stable gradient flow, separate sigmoid output-layer derivative handling, and configurable architectures up to <strong>5 hidden layers with 12 neurons each</strong>.</li>
-        <li>Rendered real-time decision boundary visualization on an 80×80 Canvas grid (<strong>6,400 predictions per frame</strong>) using requestAnimationFrame at 60fps while training 5 epochs per frame.</li>
-        <li>Designed 5 procedural dataset generators (XOR, Spiral, Moons, Circle, Gaussian) with interactive hyperparameter controls — activation function, learning rate, loss function — enabling live experimentation.</li>
+        <li>Built a complete neural network <strong>from scratch in TypeScript</strong> &mdash; forward pass, backpropagation, and SGD with zero ML library dependencies. Configurable architectures up to 5 hidden layers.</li>
+        <li>Real-time decision boundary visualization renders <strong>6,400 predictions per frame</strong> on an 80&times;80 Canvas grid at 60fps; 5 procedural datasets with interactive hyperparameter controls.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">AI Image Detector — Chrome Extension &nbsp;—&nbsp; <em>Python, ONNX Runtime, Vision Transformer, Chrome APIs</em></span>
+        <span class="entry-title">AI Image Detector &mdash; Chrome Extension &nbsp;&mdash;&nbsp; <em>Python, ONNX Runtime, Vision Transformer</em></span>
         <span class="entry-date"><a href="https://github.com/Josh2106/deepfake-detector" target="_blank">source</a></span>
       </div>
       <ul>
-        <li>Built a Chrome extension that flags AI-generated images on any webpage, running inference <strong>entirely in the browser</strong> via ONNX Runtime Web — no data leaves the user's machine.</li>
-        <li>Exported a pre-trained Vision Transformer (Organika/sdxl-detector) from Hugging Face to ONNX format and applied <strong>INT8 dynamic quantization</strong>, shrinking model size from 350MB to ~90MB for browser deployment.</li>
-        <li>Engineered end-to-end pipeline: Python export/quantize scripts → ONNX model → Chrome extension with background service worker, content script injection, and popup UI for per-page detection results.</li>
+        <li>Chrome extension that flags AI-generated images on any webpage with inference running <strong>entirely in-browser</strong> via ONNX Runtime Web &mdash; no data leaves the user's machine.</li>
+        <li>Exported Vision Transformer from Hugging Face to ONNX, applied <strong>INT8 quantization</strong> (350MB &rarr; 90MB); built full extension pipeline with background worker, content script, and popup UI.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Animal Detection &amp; Identification System &nbsp;—&nbsp; <em>Python, OpenCV, MediaPipe, Deep Learning</em></span>
+        <span class="entry-title">Animal Detection &amp; Identification System &nbsp;&mdash;&nbsp; <em>Python, OpenCV, MediaPipe</em></span>
       </div>
       <ul>
-        <li>Designed a Python-based computer-vision system that detects and classifies animal species across <strong>three input modalities</strong> — live camera feeds, recorded video, and static images — through a single unified detection pipeline.</li>
-        <li>Built on OpenCV and MediaPipe with deep-learning-based object detection; engineered the pipeline to handle frame-rate variance, lighting shifts, and viewpoint changes between training data and live inference.</li>
-        <li>Targeted real-world deployment in <strong>zoos, wildlife sanctuaries, and biodiversity monitoring</strong>, including an anti-poaching mode that triggers instant alerts when animals are detected inside geo-fenced restricted zones.</li>
-        <li>Surfaced and addressed the deployment gap between static-image training distributions and live-feed conditions — informing a more robust evaluation strategy.</li>
+        <li>Computer vision system classifying animal species across <strong>3 input modes</strong> (live camera, video, images) via a unified deep-learning pipeline; designed for zoos, wildlife sanctuaries, and anti-poaching alert zones.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Smart Crash Detection &amp; Traffic Management System &nbsp;—&nbsp; <em>Python, Arduino, IoT Sensors</em></span>
+        <span class="entry-title">Smart Crash Detection &amp; Traffic Management &nbsp;&mdash;&nbsp; <em>Python, Arduino, IoT Sensors</em></span>
       </div>
       <ul>
-        <li>Built a hardware-software integrated IoT system for <strong>real-time crash detection and traffic-congestion monitoring</strong>, bridging embedded sensors with Python-based analytics on a physical prototype.</li>
-        <li>Implemented <strong>multi-sensor fusion</strong> across ultrasonic sensors (distance measurement), vibration/impact sensors (collision detection), and IR sensors (road-condition monitoring); handled real-world noise with thresholding and debounce logic.</li>
-        <li>Designed continuous pattern-detection in Python to identify abnormal sensor signatures (sudden impacts, distance-cluster congestion) and distinguish them from routine road events such as bumps and slowdowns.</li>
-        <li>Wired up an automated alerting layer that triggers instant notifications on detection — demonstrated end-to-end on a working physical model targeting smart-city and intelligent-transport-system applications.</li>
+        <li>Hardware-software IoT system with <strong>multi-sensor fusion</strong> (ultrasonic, vibration, IR) for real-time crash detection and congestion monitoring; Python analytics with threshold/debounce logic and instant alerting.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Stress Score Analysis System &nbsp;—&nbsp; <em>Python, NLP, Text Analytics</em></span>
+        <span class="entry-title">Stress Score Analysis System &nbsp;&mdash;&nbsp; <em>Python, NLP, Text Analytics</em></span>
       </div>
       <ul>
-        <li>Built a Python-based NLP system that <strong>quantifies a user's stress level</strong> from written daily reflections, producing an explainable numeric score grounded in linguistic features rather than a black-box prediction.</li>
-        <li>Designed and curated a stress-related lexicon for keyword and phrase matching against incoming text; layered tokenisation, text normalisation, and emotional-pattern detection on top.</li>
-        <li>Targeted <strong>educational institutions</strong> as the primary use case — enabling proactive identification of at-risk students through structured journaling, while keeping the scoring fully transparent and auditable.</li>
-        <li>Explored ethical-AI considerations around mental-health data: opt-in design, anonymisation, and the value of explainable scores in sensitive domains where trust matters more than marginal accuracy.</li>
+        <li>NLP system that <strong>quantifies stress levels</strong> from written reflections using a curated lexicon and emotional-pattern detection; designed for educational institutions to proactively identify at-risk students.</li>
       </ul>
+    </div>
+
+    <div class="other-projects">
+      <div class="op-item"><span class="op-title">3D Tic-Tac-Toe</span> &mdash; React + React Three Fiber + react-spring; 3D game board with orbit controls and physics animations. <a href="https://github.com/Josh2106/xoxogame" target="_blank">[code]</a></div>
+      <div class="op-item"><span class="op-title">ClaimStream</span> &mdash; Full-stack insurance claims management web app with responsive dashboard UI. <a href="https://github.com/Josh2106/claimstream" target="_blank">[code]</a></div>
+      <div class="op-item"><span class="op-title">DBMS Project</span> &mdash; TypeScript + SQL relational system with ER design, normalisation (3NF), and typed CRUD interfaces. <a href="https://github.com/Josh2106/dbms-project" target="_blank">[code]</a></div>
     </div>
 
   </div>
@@ -319,21 +327,11 @@
     </div>
     <div class="skills-row">
       <div class="skills-label">Embedded / IoT</div>
-      <div class="skills-value">Arduino, Microcontrollers, Ultrasonic / IR / Vibration Sensors, Sensor Fusion, Serial Communication</div>
+      <div class="skills-value">Arduino, Microcontrollers, Ultrasonic / IR / Vibration Sensors, Sensor Fusion</div>
     </div>
     <div class="skills-row">
       <div class="skills-label">Web &amp; Tools</div>
-      <div class="skills-value">Next.js, React, TypeScript, Tailwind CSS, Canvas API, Chrome Extensions, Framer Motion · Git, GitHub, Vercel</div>
-    </div>
-  </div>
-
-  <!-- CERTIFICATIONS -->
-  <div class="sec">
-    <div class="sec-title">Certifications</div>
-    <div class="compact-list">
-      <strong>NPTEL (IIT Madras):</strong> Cyber Security &amp; Privacy &nbsp;·&nbsp; English for Competitive Exams &nbsp;&nbsp;|&nbsp;&nbsp;
-      <strong>Infosys Springboard:</strong> AI — Types of AI &nbsp;·&nbsp; Python Data Analysis &amp; Visualization Masterclass &nbsp;&nbsp;|&nbsp;&nbsp;
-      <strong>Cisco Networking Academy:</strong> Intro to CyberSecurity &nbsp;·&nbsp; Python Essentials &nbsp;·&nbsp; Cybersecurity Essentials
+      <div class="skills-value">Next.js, React, React Three Fiber, Tailwind CSS, Canvas API, Chrome Extensions &middot; Git, GitHub, Vercel</div>
     </div>
   </div>
 
@@ -343,33 +341,43 @@
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">IAESTE LC Karunya University &nbsp;—&nbsp; <em>Senior Coordinator, IT &amp; Data Analytics</em></span>
-        <span class="entry-date">Feb 2026 — Present</span>
+        <span class="entry-title">IAESTE LC Karunya University &nbsp;&mdash;&nbsp; <em>Senior Coordinator, IT &amp; Data Analytics</em></span>
+        <span class="entry-date">Feb 2026 &mdash; Present</span>
       </div>
-      <div class="entry-sub">Lead the IT &amp; Data Analytics portfolio: data pipelines, dashboards, and analytics-driven decisions for the Local Committee; mentor junior coordinators.</div>
+      <div class="entry-sub">Lead IT &amp; Data Analytics portfolio: data pipelines, dashboards, and analytics-driven decisions for the Local Committee; mentor junior coordinators.</div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">IAESTE LC Karunya University &nbsp;—&nbsp; <em>Junior Coordinator, IR &amp; HR</em></span>
-        <span class="entry-date">Sept 2025 — Feb 2026</span>
+        <span class="entry-title">IAESTE LC Karunya University &nbsp;&mdash;&nbsp; <em>Junior Coordinator, IR &amp; HR</em></span>
+        <span class="entry-date">Sept 2025 &mdash; Feb 2026</span>
       </div>
-      <div class="entry-sub">Coordinated with international IAESTE committees on offer processing and exchange-participant communication; drove HR operations and internal documentation.</div>
+      <div class="entry-sub">Coordinated with international IAESTE committees on offer processing and exchange-participant communication.</div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">ACM Karunya University Chapter &nbsp;—&nbsp; <em>Treasurer</em></span>
-        <span class="entry-date">July 2025 — Dec 2025</span>
+        <span class="entry-title">ACM Karunya University Chapter &nbsp;&mdash;&nbsp; <em>Treasurer</em></span>
+        <span class="entry-date">July 2025 &mdash; Dec 2025</span>
       </div>
-      <div class="entry-sub">Led financial management and budgeting for the chapter; helped organise technical workshops, seminars, and skill-development events alongside faculty and external speakers.</div>
+      <div class="entry-sub">Financial management and budgeting; organised technical workshops and skill-development events.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="sec">
+    <div class="sec-title">Certifications</div>
+    <div class="compact-list">
+      <strong>NPTEL (IIT Madras):</strong> Cyber Security &amp; Privacy &nbsp;&middot;&nbsp; English for Competitive Exams &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Infosys Springboard:</strong> AI &mdash; Types of AI &nbsp;&middot;&nbsp; Python Data Analysis &amp; Visualization &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Cisco:</strong> Intro to CyberSecurity &nbsp;&middot;&nbsp; Python Essentials &nbsp;&middot;&nbsp; Cybersecurity Essentials
     </div>
   </div>
 
   <!-- LANGUAGES -->
   <div class="sec">
     <div class="sec-title">Languages</div>
-    <div class="compact-list">English &nbsp;·&nbsp; Hindi</div>
+    <div class="compact-list">English &nbsp;&middot;&nbsp; Hindi</div>
   </div>
 
 </div>
